@@ -1,0 +1,11 @@
+.scoreboard-container {
+  background-color: var(--primary-color);
+  height: 200px;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.score {
+  font-size: 50px;
+}

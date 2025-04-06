@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import "./App.css";
+import ScoreCard from "./components/scorecard/ScoreCard";
+import ScoreCardOperations from "./components/scoreCardOperations/ScoreCardOperations";
+import Message from "./components/message/Message";
 function App() {
+  let [score, scoreFun] = useState(100);
+  console.log("app component rendering", score);
+
+  // function incrementCounter() {
+  //   console.log("I am incrementing");
+  //   score = score + 1;
+  //   scoreFun(score);
+  //   console.log("updated score", score);
+  // }
+
+  function incrementCounter(value) {
+    console.log("I am incrementing");
+    score = score + value;
+    scoreFun(score);
+    console.log("updated score", score);
+  }
+
+  // function incrementBy5Counter() {
+  //   console.log("I am incrementing");
+  //   score = score + 5;
+  //   scoreFun(score);
+  //   console.log("updated score", score);
+  // }
+
+  // function normalTestFun() {
+  //   console.log("hi hi hi");
+  // }
+
+  //useCall, useMemo, React.memo
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ScoreCard score={score} />
+      <ScoreCardOperations
+        incrementScore={incrementCounter}
+        // incrementScoreBy5={incrementBy5Counter}
+      />
     </div>
   );
 }

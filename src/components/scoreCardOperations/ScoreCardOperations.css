@@ -1,0 +1,12 @@
+.scoreButton {
+  padding: 10px 30px;
+  background-color: var(--secondary-color);
+  margin: 10px;
+  color: white;
+  font-size: 30px;
+  border: none;
+}
+.scoreButton:hover {
+  cursor: pointer;
+  background-color: brown;
+}
