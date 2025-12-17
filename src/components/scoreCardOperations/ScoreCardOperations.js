@@ -6,9 +6,8 @@ function ScoreCardOperations(props) {
   //   function incremenByOne() {
   //     incrementScore(1);
   //   }
-  function checking() {}
+  function checking() { }
   //functions expressions
-  const marks = 100;
   //   const checkingFunExpress = function(){
   //     console.log('asfasfdsaf')
   //   }

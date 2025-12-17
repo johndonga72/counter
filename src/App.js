@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import ScoreCard from "./components/scorecard/ScoreCard";
 import ScoreCardOperations from "./components/scoreCardOperations/ScoreCardOperations";
-import Message from "./components/message/Message";
 function App() {
   let [score, scoreFun] = useState(100);
   console.log("app component rendering", score);
@@ -38,7 +37,7 @@ function App() {
       <ScoreCard score={score} />
       <ScoreCardOperations
         incrementScore={incrementCounter}
-        // incrementScoreBy5={incrementBy5Counter}
+      // incrementScoreBy5={incrementBy5Counter}
       />
     </div>
   );
